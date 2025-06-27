@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Funding - Car, Boat, Truck & Business Loans Australia</title>
+    <meta name="description" content="Complete Funding offers competitive car loans, boat loans, truck finance, personal loans, and business funding across Australia. Quick approvals, transparent rates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-teal: #0099b8;
+            --light-aqua: #6EECE5;
+            --dark-navy: #1B365D;
+            --accent-yellow: #F9D94A;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-navy);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary-teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+            margin-left: 1rem;
+        }
+
+        .mobile-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--dark-navy);
+            margin: 4px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(27, 54, 93, 0.8), rgba(0, 153, 184, 0.8)),
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: var(--accent-yellow);
+            color: var(--dark-navy);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(249, 217, 74, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 217, 74, 0.4);
+        }
+
+        /* Services Section */
+        #services {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-teal), var(--light-aqua));
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-teal), var(--light-aqua));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.25rem 0;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-teal);
+            font-weight: bold;
+        }
+
+        .service-cta {
+            background: var(--primary-teal);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .service-cta:hover {
+            background: var(--dark-navy);
+            transform: translateY(-2px);
+        }
+
+        /* Tools Section */
+        #tools {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .tools-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .tool-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--light-aqua);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .tool-card h3 {
+            color: var(--dark-navy);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .calculator {
+            margin: 2rem 0;
+        }
+
+        .calc-input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .calc-result {
+            background: var(--primary-teal);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Reviews Section */
+        #reviews {
+            padding: 6rem 0;
+            background: var(--dark-navy);
+            color: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .review-stars {
+            color: var(--accent-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--light-aqua);
+        }
+
+        /* Contact Banner */
+        #contact {
+            background: linear-gradient(135deg, var(--primary-teal), var(--light-aqua));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-yellow);
+            text-decoration: none;
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 2px solid var(--accent-yellow);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-number:hover {
+            background: var(--accent-yellow);
+            color: var(--dark-navy);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--light-aqua);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--light-aqua);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .compliance-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tools-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .contact-content h2 {
+                font-size: 2rem;
+            }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Lenders Cards */
+        .lenders-section {
+    background: #fff;
+    padding: 4rem 1rem 3rem 1rem;
+    text-align: center;
+}
+.lenders-section h2 {
+    color: #0097b2;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.lenders-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.lenders-carousel-track {
+    display: flex;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+}
+.lenders-carousel-slide {
+    min-width: 260px;
+    max-width: 260px;
+    margin: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lenders-carousel-slide img {
+    max-width: 220px;
+    max-height: 110px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.lenders-carousel-slide img:hover {
+    opacity: 1;
+}
+.lenders-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0099b2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 2;
+    opacity: 0.8;
+}
+.lenders-carousel-btn.left {
+    left: 0;
+}
+.lenders-carousel-btn.right {
+    right: 0;
+}
+@media (max-width: 900px) {
+    .lenders-carousel-slide {
+        min-width: 180px;
+        max-width: 180px;
+        margin: 0 12px;
+    }
+    .lenders-carousel-slide img {
+        max-width: 140px;
+        max-height: 70px;
+    }
+}
+/* Optional: To help with overlay effect */
+#hero-title {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+}
+#hero-anim-complete span,
+#hero-anim-funding span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+}
+@media (max-width: 700px) {
+    #hero-anim-complete span,
+    #hero-anim-funding span {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <img class="logo" src="images/logo.svg" alt="Complete Funding Logo">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="hero">
+    <div class="hero-content">
+        <h1 id="hero-title" class="hero-title-logo">
+            <span class="complete" style="color:#6EECE5;">complete</span>
+            <span class="funding" style="color:#0099b8;">FUNDING</span>
+        </h1>
+        <p>Fast approvals for car loans, boat finance, truck funding, personal loans, and business finance across Australia. Competitive rates, transparent process, local support.</p>
+        <a href="#services" class="cta-button">Explore Our Services</a>
+    </div>
+</section>
+<style>
+.hero-title-logo {
+    font-size: clamp(2.2rem, 7vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-family: 'Baloo 2', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.hero-type-row {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+#hero-anim-complete, #hero-anim-funding {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    display: inline-block;
+}
+#hero-anim-complete span,
+#hero-anim-funding span {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    display: inline-block;
+}
+@media (max-width: 700px) {
+    .hero-title-logo {
+        font-size: clamp(1.2rem, 8vw, 2.5rem);
+    }
+}
+</style>
+<script>
+// Animate hero text: types out "complete" in #6EECE5 and "FUNDING" in #0099b8, using logo font and correct size, and keeps each word together on one line
+function animateHeroTitle() {
+    const heroTitle = document.getElementById('hero-title');
+    const completeText = 'complete';
+    const fundingText = 'FUNDING';
+
+    // Initial colored text with logo font and responsive size
+    heroTitle.innerHTML = `
+        <span class="complete" style="color:#6EECE5;">${completeText}</span>
+        <span class="funding" style="color:#0099b8;">${fundingText}</span>
+    `;
+
+    setTimeout(() => {
+        // Use inline-flex to keep each word together on one line, responsive
+        heroTitle.innerHTML = `
+            <span class="hero-type-row">
+                <span id="hero-anim-complete"></span>
+            </span>
+            <span class="hero-type-row">
+                <span id="hero-anim-funding"></span>
+            </span>
+        `;
+
+        const animComplete = document.getElementById('hero-anim-complete');
+        const animFunding = document.getElementById('hero-anim-funding');
+
+        // Animate "complete" per letter in color
+        let i = 0;
+        function typeComplete() {
+            if (i < completeText.length) {
+                const span = document.createElement('span');
+                span.textContent = completeText[i];
+                span.style.color = '#6EECE5';
+                animComplete.appendChild(span);
+                i++;
+                setTimeout(typeComplete, 80);
+            } else {
+                // Animate "FUNDING" per letter in color
+                let j = 0;
+                function typeFunding() {
+                    if (j < fundingText.length) {
+                        const span = document.createElement('span');
+                        span.textContent = fundingText[j];
+                        span.style.color = '#0099b8';
+                        animFunding.appendChild(span);
+                        j++;
+                        setTimeout(typeFunding, 80);
+                    }
+                }
+                typeFunding();
+            }
+        }
+        typeComplete();
+    }, 1200); // Wait before animating
+}
+
+window.addEventListener('DOMContentLoaded', animateHeroTitle);
+
+// ...existing code below...
+</script>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Finance Solutions</h2>
+            <p class="section-subtitle">From personal vehicles to business expansion, we provide tailored financing solutions with competitive rates and quick approvals.</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚗</div>
+                    <h3>Car Loans</h3>
+                    <p>New and used car financing with competitive rates and flexible terms.</p>
+                    <ul class="service-features">
+                        <li>Rates from 5.99% p.a.</li>
+                        <li>Up to 7 years repayment</li>
+                        <li>New & used vehicles</li>
+                        <li>Quick pre-approval</li>
+                    </ul>
+                    <button class="service-cta">Apply Now</button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏍️</div>
+                    <h3>Motorbike Loans</h3>
+                    <p>Finance your dream bike with our specialized motorbike loan products.</p>
+                    <ul class="service-features">
+                        <li>Rates from 6.49% p.a.</li>
+                        <li>Up to 5 years terms</li>
+                        <li>New & used bikes</li>
+                        <li>Instant online quotes</li>
+                    </ul>
+                    <button class="service-cta">Get Quote</button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">⛵</div>
+                    <h3>Boat Loans</h3>
+                    <p>Navigate to your dream vessel with our marine financing solutions.</p>
+                    <ul class="service-features">
+                        <li>Rates from 6.99% p.a.</li>
+                        <li>Up to 15 years terms</li>
+                        <li>New & used boats</li>
+                        <li>Marine insurance options</li>
+                    </ul>
+                    <button class="service-cta">Set Sail</button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">💰</div>
+                    <h3>Personal Loans</h3>
+                    <p>Flexible personal loans for life's important moments and unexpected expenses.</p>
+                    <ul class="service-features">
+                        <li>$2,000 to $50,000</li>
+                        <li>Fixed rate options</li>
+                        <li>No early exit fees</li>
+                        <li>Same day approval</li>
+                    </ul>
+                    <button class="service-cta">Apply Today</button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚛</div>
+                    <h3>Truck Finance</h3>
+                    <p>Commercial vehicle financing for trucking businesses and owner-operators.</p>
+                    <ul class="service-features">
+                        <li>Heavy & light commercial</li>
+                        <li>Lease & hire purchase</li>
+                        <li>Equipment financing</li>
+                        <li>Fleet solutions</li>
+                    </ul>
+                    <button class="service-cta">Get Rolling</button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏢</div>
+                    <h3>Business Loans</h3>
+                    <p>Fuel your business growth with our comprehensive business funding solutions.</p>
+                    <ul class="service-features">
+                        <li>Working capital</li>
+                        <li>Equipment finance</li>
+                        <li>Business expansion</li>
+                        <li>Cash flow solutions</li>
+                    </ul>
+                    <button class="service-cta">Grow Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <div class="container">
+            <h2 class="section-title">Loan Calculator</h2>
+            <p class="section-subtitle">Calculate your estimated repayments and see what you can afford with our easy-to-use loan calculator.</p>
+            
+            <div class="tools-container">
+                <div class="tool-card fade-in">
+                    <h3>Loan Calculator</h3>
+                    <p>Calculate your estimated repayments and see what you can afford.</p>
+                    <div class="calculator">
+                        <input type="number" class="calc-input" id="loanAmount" placeholder="Loan Amount ($)" min="1000" max="500000">
+                        <input type="number" class="calc-input" id="interestRate" placeholder="Interest Rate (%)" min="1" max="20" step="0.1">
+                        <input type="number" class="calc-input" id="loanTerm" placeholder="Loan Term (years)" min="1" max="15">
+                        <button class="service-cta" onclick="calculateLoan()">Calculate</button>
+                        <div class="calc-result" id="result" style="display: none;">
+                            <div>Monthly Payment: $<span id="monthlyPayment">0</span></div>
+                            <div>Total Interest: $<span id="totalInterest">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="lenders" class="lenders-section">
+    <h2>We partner with over 40+ lenders</h2>
+    <div class="lenders-carousel-container">
+        <button class="lenders-carousel-btn left" aria-label="Previous">&#8249;</button>
+        <div class="lenders-carousel-track" id="lenders-carousel-track">
+            <div class="lenders-carousel-slide">
+                <img src="images/anz.png" alt="ANZ">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/Westpac.png" alt="Westpac">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/autopay.png" alt="AutoPay">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/pepper-money.png" alt="Pepper">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/latitude.png" alt="Latitude">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/macquarie.png" alt="Macquarie">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/now-finance.png" alt="Now Finance">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/plenti.png" alt="Plenti">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/liberty.png" alt="Liberty">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/metro.png" alt="Metro">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/societyone.png" alt="SocietyOne">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/ume-loans.png" alt="ume-loans">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/afs.png" alt="Automotive Financial Services">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/financone.png" alt="Finance One">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/grow.png" alt="Grow Finance">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/moula.png" alt="Moula">
+            </div>
+            <div class="lenders-carousel-slide">
+                <img src="images/wisr.png" alt="Wisr">
+            </div>
+        </div>
+        <button class="lenders-carousel-btn right" aria-label="Next">&#8250;</button>
+    </div>
+</section>
+
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Don't just take our word for it - here's what real customers say about Complete Funding.</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Absolutely fantastic service! Got my car loan approved within 24 hours. The team was professional and made the whole process seamless. Highly recommend Complete Funding!"</p>
+                    <p class="review-author">- Sarah M., Sydney</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Best rates I could find for my boat loan. The team understood my needs and provided excellent guidance throughout. Now enjoying weekends on the water thanks to Complete Funding!"</p>
+                    <p class="review-author">- Michael T., Brisbane</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Professional service for my truck finance. They worked with my business requirements and provided flexible terms. Great communication and fast approval process."</p>
+                    <p class="review-author">- David L., Melbourne</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Complete Funding helped me consolidate my debts with a personal loan at a much better rate. The online application was easy and support team was always available to help."</p>
+                    <p class="review-author">- Emma R., Perth</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Excellent business loan service. They understood my industry and provided funding that helped expand my operations. Transparent process and competitive rates."</p>
+                    <p class="review-author">- James K., Adelaide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Speak with our friendly finance experts today. Quick quotes, competitive rates, Australian-wide service.</p>
+                <a href="tel:1300008618" class="phone-number">📞 1300 008 618</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Complete Funding</h4>
+                    <p>Your trusted Australian finance partner for over a decade. We provide competitive loans with transparent terms and exceptional customer service.</p>
+                    <p><strong>Phone:</strong> 1300 008 618</p>
+                    <p><strong>Email:</strong> info@completefunding.com.au</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Car Loans</a></li>
+                        <li><a href="#services">Motorbike Finance</a></li>
+                        <li><a href="#services">Boat Loans</a></li>
+                        <li><a href="#services">Personal Loans</a></li>
+                        <li><a href="#services">Truck Finance</a></li>
+                        <li><a href="#services">Business Loans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#tools">Loan Calculator</a></li>
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Compliance & Licensing</h4>
+                    <p><strong>ABN:</strong> 12 345 678 901</p>
+                    <p><strong>ACN:</strong> 123 456 789</p>
+                    <p><strong>Australian Credit Licence:</strong> 123456</p>
+                    <div class="compliance-badges">
+                        <span class="badge">ASIC Regulated</span>
+                        <span class="badge">AFCA Member</span>
+                        <span class="badge">MFAA Member</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Complete Funding. All rights reserved. | Complete Funding is a responsible lending provider committed to the National Consumer Credit Protection Act.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Loan Calculator
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const rate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const term = parseFloat(document.getElementById('loanTerm').value) * 12;
+
+            if (!amount || !rate || !term) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const monthlyPayment = amount * (rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1);
+            const totalInterest = (monthlyPayment * term) - amount;
+
+            document.getElementById('monthlyPayment').textContent = monthlyPayment.toFixed(2);
+            document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
+            document.getElementById('result').style.display = 'block';
+        }
+
+        // Eligibility Quiz
+        function checkEligibility() {
+            const income = document.getElementById('income').value;
+            const employment = document.getElementById('employment').value;
+            const credit = document.getElementById('creditHistory').value;
+
+            if (!income || !employment || !credit) {
+                alert('Please complete all fields');
+                return;
+            }
+
+            let eligibilityScore = 0;
+            let maxLoan = 0;
+            let recommendedProducts = [];
+
+            // Scoring system
+            if (parseInt(income) >= 100000) eligibilityScore += 4;
+            else if (parseInt(income) >= 75000) eligibilityScore += 3;
+            else if (parseInt(income) >= 50000) eligibilityScore += 2;
+            else eligibilityScore += 1;
+
+            if (employment === 'fulltime') eligibilityScore += 3;
+            else if (employment === 'parttime') eligibilityScore += 2;
+            else eligibilityScore += 1;
+
+            if (credit === 'excellent') eligibilityScore += 4;
+            else if (credit === 'good') eligibilityScore += 3;
+            else if (credit === 'fair') eligibilityScore += 2;
+            else eligibilityScore += 1;
+
+            // Determine eligibility
+            if (eligibilityScore >= 9) {
+                maxLoan = parseInt(income) * 6;
+                recommendedProducts = ['Car Loans', 'Boat Loans', 'Business Loans', 'Personal Loans'];
+            } else if (eligibilityScore >= 6) {
+                maxLoan = parseInt(income) * 4;
+                recommendedProducts = ['Car Loans', 'Personal Loans', 'Motorbike Loans'];
+            } else if (eligibilityScore >= 4) {
+                maxLoan = parseInt(income) * 2;
+                recommendedProducts = ['Personal Loans', 'Car Loans'];
+            } else {
+                maxLoan = parseInt(income) * 1;
+                recommendedProducts = ['Personal Loans'];
+            }
+
+            const resultText = `
+                <div style="text-align: left;">
+                    <strong>Estimated Max Loan:</strong> ${maxLoan.toLocaleString()}<br>
+                    <strong>Recommended Products:</strong><br>
+                    ${recommendedProducts.map(product => `• ${product}`).join('<br>')}
+                    <br><br>
+                    <small>*This is an estimate only. Final approval subject to full assessment.</small>
+                </div>
+            `;
+
+            document.getElementById('eligibilityResult').innerHTML = resultText;
+            document.getElementById('eligibilityResult').style.display = 'block';
+        }
+
+        // Mobile menu logic
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const navLinks = document.getElementById('nav-links');
+const navLinkItems = navLinks.querySelectorAll('a');
+
+menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Close menu when a link is clicked
+navLinkItems.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+// Ensure menu closes on resize to desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+});
+        // Mobile menu toggle (if implemented)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Form submissions (mock functionality)
+        document.querySelectorAll('.service-cta').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceName = this.closest('.service-card').querySelector('h3').textContent;
+                alert(`Thank you for your interest in our ${serviceName}! A specialist will contact you within 24 hours. Call 1300 008 618 for immediate assistance.`);
+            });
+        });
+
+        // Auto-hide mobile menu on scroll
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (window.innerWidth <= 768) {
+                const navLinks = document.querySelector('.nav-links');
+                if (currentScroll > lastScrollTop && navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                }
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // Add loading state to calculator
+        function showCalculatorLoading() {
+            document.getElementById('result').innerHTML = '<div>Calculating...</div>';
+            document.getElementById('result').style.display = 'block';
+            
+            setTimeout(() => {
+                calculateLoan();
+            }, 500);
+        }
+
+        // Enhanced mobile responsiveness
+        function handleResize() {
+            const navLinks = document.querySelector('.nav-links');
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Call on initial load
+
+        // Preload hero image for better performance
+        const heroImage = new Image();
+        heroImage.src = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+
+        // Add subtle parallax effect to hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.getElementById('hero');
+            const rate = scrolled * -0.5;
+            hero.style.transform = `translateY(${rate}px)`;
+        });
+
+        // Add hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add smooth reveal animation for reviews
+        const reviewCards = document.querySelectorAll('.review-card');
+        reviewCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced form validation
+        function validateCalculatorInputs() {
+            const amount = document.getElementById('loanAmount').value;
+            const rate = document.getElementById('interestRate').value;
+            const term = document.getElementById('loanTerm').value;
+
+            if (amount < 1000 || amount > 500000) {
+                alert('Loan amount must be between $1,000 and $500,000');
+                return false;
+            }
+
+            if (rate < 1 || rate > 20) {
+                alert('Interest rate must be between 1% and 20%');
+                return false;
+            }
+
+            if (term < 1 || term > 15) {
+                alert('Loan term must be between 1 and 15 years');
+                return false;
+            }
+
+            return true;
+        }
+
+        // Add click tracking for analytics (mock implementation)
+        function trackClick(element, action) {
+            console.log(`Analytics: ${action} clicked on ${element}`);
+            // In a real implementation, this would send data to Google Analytics or similar
+        }
+
+        // Add event listeners for tracking
+        document.querySelectorAll('.cta-button, .service-cta, .phone-number').forEach(button => {
+            button.addEventListener('click', function() {
+                trackClick(this.textContent, 'CTA Button');
+            });
+        });
+
+        // Add error handling for failed image loads
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjhGOUZBIi8+CjxwYXRoIGQ9Ik0xMDAgNTBMMTUwIDEwMEwxMDAgMTUwTDUwIDEwMEwxMDAgNTBaIiBmaWxsPSIjNkM3NTdEIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNkM3NTdEIiBmb250LXNpemU9IjEyIj5JbWFnZSBOb3QgRm91bmQ8L3RleHQ+Cjwvc3ZnPg==';
+            });
+        });
+
+        console.log('Complete Funding website loaded successfully!');
+
+        // Initialize carousel for lenders section
+        (function() {
+    const track = document.getElementById('lenders-carousel-track');
+    const slides = Array.from(track.children);
+    const btnLeft = document.querySelector('.lenders-carousel-btn.left');
+    const btnRight = document.querySelector('.lenders-carousel-btn.right');
+    let index = 0;
+
+    function updateCarousel() {
+        const slideWidth = slides[0].offsetWidth + 48; // slide + margin
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    btnLeft.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    btnRight.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    });
+
+    // Faster auto-rotate (every 1.2 seconds)
+    setInterval(() => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    }, 1200);
+
+    window.addEventListener('resize', updateCarousel);
+    window.addEventListener('DOMContentLoaded', updateCarousel);
+})();
+// hero text
+function animateHeroTitle() {
+    const heroTitle = document.getElementById('hero-title');
+    const completeText = 'complete';
+    const fundingText = 'FUNDING';
+
+    // Initial colored text with logo font and responsive size
+    heroTitle.innerHTML = `
+        <span class="complete" style="color:#6EECE5;">${completeText}</span>
+        <span class="funding" style="color:#0099b8;">${fundingText}</span>
+    `;
+
+    setTimeout(() => {
+        // Use inline-flex to keep each word together on one line, responsive
+        heroTitle.innerHTML = `
+            <span class="hero-type-row">
+                <span id="hero-anim-complete"></span>
+            </span>
+            <span class="hero-type-row">
+                <span id="hero-anim-funding"></span>
+            </span>
+        `;
+
+        const animComplete = document.getElementById('hero-anim-complete');
+        const animFunding = document.getElementById('hero-anim-funding');
+
+        // Animate "complete" per letter in color
+        let i = 0;
+        function typeComplete() {
+            if (i < completeText.length) {
+                const span = document.createElement('span');
+                span.textContent = completeText[i];
+                span.style.color = '#6EECE5';
+                animComplete.appendChild(span);
+                i++;
+                setTimeout(typeComplete, 80);
+            } else {
+                // Animate "FUNDING" per letter in color
+                let j = 0;
+                function typeFunding() {
+                    if (j < fundingText.length) {
+                        const span = document.createElement('span');
+                        span.textContent = fundingText[j];
+                        span.style.color = '#0099b8';
+                        animFunding.appendChild(span);
+                        j++;
+                        setTimeout(typeFunding, 80);
+                    }
+                }
+                typeFunding();
+            }
+        }
+        typeComplete();
+    }, 1200); // Wait before animating
+}
+
+window.addEventListener('DOMContentLoaded', animateHeroTitle);
+
+    </script>
+</body>
+</html>
