@@ -1,0 +1,56 @@
+# Website Specification: Complete Funding
+
+## 1. Project Overview
+
+* **Purpose**: Build an engaging, responsive website for an Australian finance service offering car, boat, truck, personal, and business loans.
+* **Brand**: Leverage the Complete Funding logo palette (teal #0099b8, light aqua #6EECE5, dark navy #1B365D, accent yellow #F9D94A) for a modern, trustworthy look.
+* **Audience**: Australian individuals and businesses seeking finance solutions. Age 25–60, tech-savvy, value transparency, quick approvals, and localized support.
+
+## 2. Objectives
+
+1. Drive lead generation through online loan applications and contact forms.
+2. Provide clear, accessible information on each loan type.
+3. Offer interactive tools (loan calculators, eligibility quizzes).
+4. Showcase trust signals: testimonials, partner logos, compliance badges.
+5. Optimize for SEO, performance, and a mobile-first design approach.
+
+## 3. Target Audience & User Flows
+
+| Segment          | Goals                                | Primary Flow                                 |
+| ---------------- | ------------------------------------ | -------------------------------------------- |
+| Car Buyers       | Compare and apply for car loans      | Homepage → Car Loans → Calculator → Form     |
+| Boat Enthusiasts | Finance for recreational vessels     | Homepage → Boat Loans → Calculator → Form    |
+| Fleet Managers   | Truck & commercial vehicle financing | Homepage → Truck Loans → Business Inquiry    |
+| Individuals      | Personal loan for various expenses   | Homepage → Personal Loans → Eligibility Quiz |
+| Small Businesses | Working capital, equipment financing | Homepage → Business Loans → Advisor Call     |
+
+## 4. Site Structure & Single‑Page Layout
+
+This will be a **one‑page** site hosted at `/` with in‑page anchors for each section. Smooth scrolling nav links will jump to the respective sections.
+
+Sections:
+
+1. **Header & Navigation** (`#header`):
+
+   * Logo + anchor links: Hero, Services, Reviews, Contact.
+2. **Hero** (`#hero`):
+
+   * Full‑width Unsplash image + headline, subtext, primary CTA button.
+3. **Services** (`#services`):
+
+   * Grid of cards for Car, Motorbike, Boat, Personal, Business loans.
+4. **Interactive Tools** (`#tools`):
+
+   * Embedded loan calculator widget & eligibility quiz sections (optional tabs or accordions).
+5. **Google Reviews** (`#reviews`):
+
+   * Embed top 3–5 reviews via Google Places API or embed code.
+6. **Contact Banner** (`#contact`):
+
+   * Full‑width call‑to‑action bar with “Call us now: 1300 008 618”.
+7. **Footer** (`#footer`):
+
+   * Display ABN, ACN, and any required licensing information (e.g., Australian Credit Licence number).
+   * Copyright (© 2025 Complete Funding).
+   * Compliance badges (ASIC, AFCA) and partner logos carousel.
+   * Quick links and social icons.
